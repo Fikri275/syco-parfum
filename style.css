@@ -1,232 +1,158 @@
-
-/* ========== RESET & DASAR ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #2e003e;
+  background-color: #2e003e;
   color: #fff;
-  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+header {
+  background-color: #40005c;
+  padding: 10px 20px;
+  position: flex;
+  top: 0;
+  z-index: 999;
 }
 
-/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
-  flex-direction: column;
-  padding: 15px 20px;
-  background: #3e0055;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;    
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   font-size: 1.5em;
   font-weight: bold;
   color: gold;
 }
 
-#menuToggle {
-  font-size: 1.5em;
-  cursor: pointer;
-  user-select: none;
-}
-
 .nav-links {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-  gap: 10px;
-  scroll-behavior: smooth;
-}
-
-.nav-links li {
   list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #660080;
   color: white;
-  font-size: 0.9em;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.nav-links a:hover {
-  background: gold;
-  color: #3e0055;
-}
-
-/* ========== HERO SECTION ========== */
 .hero {
-  padding: 60px 20px;
-  background: linear-gradient(to right, #3f005e, #2e003e);
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('parfum-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: gold;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
 }
 
 .btn {
+  background-color: gold;
   padding: 10px 20px;
-  background: gold;
-  color: #3e0055;
-  border: none;
-  border-radius: 25px;
+  color: #2e003e;
   font-weight: bold;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
-.btn:hover {
-  background: white;
-}
-
-/* ========== PRODUK SECTION ========== */
-.products-section {
-  padding: 40px 20px;
-  background: #44005e;
+.products-section,
+.payment-section,
+.contact-section {
+  padding: 50px 20px;
   text-align: center;
-}
-
-.products-section h2 {
-  color: gold;
-  margin-bottom: 20px;
 }
 
 .products {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .product-card {
-  background: #5a007a;
-  border-radius: 15px;
-  padding: 15px;
-  width: 90%;
-  max-width: 350px;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #4d0066;
+  border: 2px solid gold;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.product-card h3 {
-  color: gold;
-}
-
-.product-card span {
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
-}
-
-/* ========== PEMBAYARAN ========== */
-.payment-section {
-  padding: 40px 20px;
-  background: #2e003e;
-  text-align: center;
-}
-
-.payment-section h2 {
-  color: gold;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 90%;
   max-width: 400px;
   margin: auto;
+  gap: 15px;
 }
 
-input, select, button {
+form input, form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background-color: gold;
+  color: #2e003e;
+  font-weight: bold;
   padding: 10px;
   border: none;
-  border-radius: 10px;
-  font-size: 1em;
+  border-radius: 5px;
 }
 
-button {
-  background: gold;
-  color: #3e0055;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: white;
-}
-
-/* ========== QRIS ========== */
-#qrisSection {
-  margin-top: 20px;
-}
-
-#qrisSection img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-/* ========== KONTAK ========== */
-.contact-section {
-  padding: 30px 20px;
-  background: #44005e;
-  text-align: center;
-}
-
-.contact-section h2 {
-  color: gold;
-  margin-bottom: 10px;
-}
-
-.contact-section p {
-  margin: 5px 0;
-}
-
-/* ========== FOOTER ========== */
 footer {
   text-align: center;
+  background-color: #22002d;
   padding: 20px;
-  background: #3e0055;
-  font-size: 0.9em;
+  margin-top: 50px;
+}
+/* Sembunyikan menu di layar kecil */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #4b0082;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-/* ========== SCROLLBAR ========== */
-.nav-links::-webkit-scrollbar {
-  height: 6px;
+.nav-links.show {
+  display: flex;
 }
-.nav-links::-webkit-scrollbar-thumb {
-  background: gold;
-  border-radius: 10px;
+
+/* Tampilkan menu di desktop */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+}
+
+/* Tambahan gaya untuk ikon menu */
+#menuToggle {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
 }
