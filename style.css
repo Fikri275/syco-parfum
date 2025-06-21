@@ -168,34 +168,41 @@ footer {
   transform: translateY(30px);
   transition: all 0.8s ease-out;
 }
-/* ==== Responsive Mobile Styles ==== */
 @media screen and (max-width: 768px) {
-  /* Navbar responsif */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 10px;
   }
 
   .nav-links {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: auto;
     gap: 10px;
-    width: 100%;
     padding-left: 0;
   }
 
   .nav-links li {
-    width: 100%;
+    list-style: none;
+    display: inline;
   }
 
   .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #40005c;
+    padding: 8px 10px;
+    font-size: 0.85em;
+    background-color: transparent;
     color: white;
-    text-align: left;
+    text-decoration: none;
+    display: inline-block;
   }
+
+  .brand {
+    font-size: 1.2em;
+  }
+}
 
   /* Hero section */
   .hero {
