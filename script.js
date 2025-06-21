@@ -2,7 +2,7 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Terima kasih telah melakukan pemesanan. Kami akan menghubungi Anda melalui WhatsApp atau email.");
 });
- document.getElementById("paymentForm").addEventListener("submit", function (e) {
+document.getElementById("paymentForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
@@ -25,7 +25,7 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
  // Animasi scroll muncul
  const sections = document.querySelectorAll(".products-section, .payment-section, .contact-section");
 
- window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   const trigger = window.innerHeight * 0.85;
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
@@ -35,7 +35,7 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
   });
 });
  // Animasi scroll ke kanan saat klik ikon ☰
- document.getElementById("menuToggle").addEventListener("click", () => {
+document.getElementById("menuToggle").addEventListener("click", () => {
   const nav = document.getElementById("navLinks");
   nav.scrollBy({
     left: 200,
