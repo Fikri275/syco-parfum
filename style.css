@@ -231,7 +231,7 @@ footer {
   }
 
   .product-card {
-    width: 90%;
+    width: 50%;
     margin-bottom: 20px;
   }
 
@@ -265,7 +265,7 @@ footer {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 10px;  
   }
 
   .brand {
@@ -305,4 +305,11 @@ footer {
     white-space: nowrap;
     text-decoration: none;
   }
+}
+.nav-links::-webkit-scrollbar {
+  height: 6px;
+}
+.nav-links::-webkit-scrollbar-thumb {
+  background-color: gold;
+  border-radius: 10px;
 }
