@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #2e003e;
+  color: #fff;
+}
+
+header {
+  background-color: #40005c;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: gold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('parfum-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  color: gold;
+}
+
+.btn {
+  background-color: gold;
+  padding: 10px 20px;
+  color: #2e003e;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.products-section,
+.payment-section,
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background-color: #4d0066;
+  border: 2px solid gold;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 15px;
+}
+
+form input, form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background-color: gold;
+  color: #2e003e;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #22002d;
+  padding: 20px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeInUp 1s ease-out both;
+}
+
+.products-section, .payment-section, .contact-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
