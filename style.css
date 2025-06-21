@@ -1,315 +1,232 @@
-body {
+
+/* ========== RESET & DASAR ========== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #2e003e;
+  background: #2e003e;
   color: #fff;
+  line-height: 1.6;
 }
 
-header {
-  background-color: #40005c;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
+/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  padding: 15px 20px;
+  background: #3e0055;
+  gap: 10px;
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.5em;
   font-weight: bold;
   color: gold;
 }
 
+#menuToggle {
+  font-size: 1.5em;
+  cursor: pointer;
+  user-select: none;
+}
+
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.nav-links li {
+  list-style: none;
 }
 
 .nav-links a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #660080;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
 }
 
+.nav-links a:hover {
+  background: gold;
+  color: #3e0055;
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('parfum-bg.jpg') no-repeat center center/cover;
-  padding: 100px 20px;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #3f005e, #2e003e);
   text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   color: gold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 .btn {
-  background-color: gold;
   padding: 10px 20px;
-  color: #2e003e;
-  font-weight: bold;
+  background: gold;
+  color: #3e0055;
   border: none;
+  border-radius: 25px;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
-  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.products-section,
-.payment-section,
-.contact-section {
-  padding: 50px 20px;
+.btn:hover {
+  background: white;
+}
+
+/* ========== PRODUK SECTION ========== */
+.products-section {
+  padding: 40px 20px;
+  background: #44005e;
   text-align: center;
+}
+
+.products-section h2 {
+  color: gold;
+  margin-bottom: 20px;
 }
 
 .products {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .product-card {
-  background-color: #4d0066;
-  border: 2px solid gold;
-  border-radius: 10px;
-  width: 250px;
-  padding: 20px;
-  text-align: center;
+  background: #5a007a;
+  border-radius: 15px;
+  padding: 15px;
+  width: 90%;
+  max-width: 350px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 8px;
-  height: 200px;
-  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  color: gold;
+}
+
+.product-card span {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* ========== PEMBAYARAN ========== */
+.payment-section {
+  padding: 40px 20px;
+  background: #2e003e;
+  text-align: center;
+}
+
+.payment-section h2 {
+  color: gold;
+  margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  width: 90%;
   max-width: 400px;
   margin: auto;
-  gap: 15px;
 }
 
-form input, form select {
+input, select, button {
   padding: 10px;
-  border-radius: 5px;
   border: none;
+  border-radius: 10px;
+  font-size: 1em;
 }
 
-form button {
-  background-color: gold;
-  color: #2e003e;
+button {
+  background: gold;
+  color: #3e0055;
   font-weight: bold;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
+button:hover {
+  background: white;
+}
+
+/* ========== QRIS ========== */
+#qrisSection {
+  margin-top: 20px;
+}
+
+#qrisSection img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* ========== KONTAK ========== */
+.contact-section {
+  padding: 30px 20px;
+  background: #44005e;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  margin: 5px 0;
+}
+
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  background-color: #22002d;
   padding: 20px;
-  margin-top: 50px;
-}
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text h1 {
-    font-size: 1.5em;
-  }
-
-  form {
-    width: 90%;
-  }
-
-  .product-card {
-    width: 90%;
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background: #3e0055;
+  font-size: 0.9em;
 }
 
-.fade-up {
-  animation: fadeInUp 1s ease-out both;
-}
-
-.products-section, .payment-section, .contact-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-
- @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    width: auto;
-    gap: 10px;
-    padding-left: 0;
-  }
-
-  .nav-links li {
-    list-style: none;
-    display: inline;
-  }
-
-  .nav-links a {
-    padding: 8px 10px;
-    font-size: 0.85em;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .brand {
-    font-size: 1.2em;
-  }
-
-
-  /* Hero section */
-  .hero {
-    padding: 60px 20px;
-    background-position: center;
-  }
-
-  .hero-text h1 {
-    font-size: 1.6em;
-  }
-
-  .hero-text p {
-    font-size: 1em;
-  }
-
-  .btn {
-    padding: 10px 15px;
-    font-size: 0.9em;
-  }
-
-  /* Produk */
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-card {
-    width: 50%;
-    margin-bottom: 20px;
-  }
-
-  .product-card img {
-    height: auto;
-  }
-
-  /* Form Pembayaran */
-  form {
-    width: 90%;
-    margin: auto;
-  }
-
-  input, select, button {
-    font-size: 1em;
-  }
-
-  /* QRIS Image */
-  #qrisSection img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Footer */
-  footer {
-    font-size: 0.9em;
-  }
-}
- /* ======= MOBILE NAVBAR HORIZONTAL + ICON ======= */
- @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;  
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3em;
-    color: gold;
-  }
-
-  #menuToggle {
-    font-size: 1.5em;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .nav-links {
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    padding: 10px 0;
-    scroll-behavior: smooth;
-  }
-
-  .nav-links li {
-    display: inline;
-  }
-
-  .nav-links a {
-    padding: 8px 14px;
-    background: #4d0066;
-    border-radius: 20px;
-    color: white;
-    font-size: 0.9em;
-    white-space: nowrap;
-    text-decoration: none;
-  }
-}
+/* ========== SCROLLBAR ========== */
 .nav-links::-webkit-scrollbar {
   height: 6px;
 }
 .nav-links::-webkit-scrollbar-thumb {
-  background-color: gold;
+  background: gold;
   border-radius: 10px;
 }
